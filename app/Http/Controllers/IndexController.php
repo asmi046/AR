@@ -11,6 +11,10 @@ class IndexController extends Controller
         return view('index');
     }
 
+    public function dimon() {
+        return view('dimon');
+    }
+
     public function ar($id) {
         $element = ArElement::where('id', $id)->first();
 
