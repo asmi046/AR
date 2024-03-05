@@ -7,6 +7,7 @@ namespace App\MoonShine\Resources;
 use MoonShine\Fields\ID;
 use App\Models\ArElement;
 
+use MoonShine\Fields\Url;
 use MoonShine\Fields\File;
 use MoonShine\Fields\Text;
 use MoonShine\Fields\Image;
@@ -32,7 +33,9 @@ class ArElementResource extends ModelResource
                 ID::make()->sortable(),
                 Text::make('Имя','name'),
                 Image::make('Изображение', 'img')->accept("image/jpeg"),
-                File::make('Звук','sound')->accept("audio/mp3")
+                File::make('Звук','sound')->accept("audio/mp3"),
+
+                 Url::make("QR код", 'id', fn($data) =>  route('qr',$data['id']))
             ]),
         ];
     }
