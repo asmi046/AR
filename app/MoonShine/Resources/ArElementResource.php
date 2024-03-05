@@ -35,7 +35,7 @@ class ArElementResource extends ModelResource
                 Image::make('Изображение', 'img')->accept("image/jpeg"),
                 File::make('Звук','sound')->accept("audio/mp3"),
 
-                 Url::make("QR код", 'id', fn($data) =>  route('qr',$data['id']))
+                Text::make("QR код", 'id', fn($data) =>  "<a target='_blank' href='".route('qr',$data['id'])."'>Сгенерировать QR</a>")
             ]),
         ];
     }
