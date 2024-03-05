@@ -4,4 +4,4 @@
     use App\Http\Controllers\IndexController;
 
     Route::get('/', [IndexController::class, "index"])->name('home');
-    Route::get('/ar_view', [IndexController::class, "ar"])->name('ar');
+    Route::get('/ar_view/{id}', [IndexController::class, "ar"])->name('ar');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ArElement;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -10,7 +11,11 @@ class IndexController extends Controller
         return view('index');
     }
 
-    public function ar() {
-        return view('ar');
+    public function ar($id) {
+        $element = ArElement::where('id', $id)->first();
+
+        if($element == null) abort('404');
+
+        return view('ar', ['element' => $element]);
     }
 }

@@ -29,9 +29,9 @@
     <a-scene embedded arjs>
       <a-marker markerhandler preset="hiro">
 
-        <a-image rotation="-99 0 0" src="ptah.jpg"></a-image>
+        <a-image rotation="-99 0 0" src="{{ Storage::url($element->img) }}"></a-image>
         <a-entity id="river" geometry="primitive: plane" material="color: blue"
-          position="-10 0 0" sound="src: url(ptah.mp3); autoplay: false;"></a-entity>
+          position="-10 0 0" sound="src: url({{ Storage::url($element->sound) }}); autoplay: false;"></a-entity>
 
 <!--
        <a-entity
