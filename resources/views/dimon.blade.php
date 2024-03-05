@@ -34,9 +34,9 @@
           position="-10 0 0" sound="src: url({{ Storage::url($element->sound) }}); autoplay: false;"></a-entity> --}}
 
        <a-entity
-          position="-1 0 0"
+          position="0 0 -1"
           scale="1 1 1"
-          rotation="-99 10 0"
+          rotation="-99 0 -20"
           gltf-model="{{asset('models/dimon.glb')}}"
         ></a-entity>
 
