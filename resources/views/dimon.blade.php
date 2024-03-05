@@ -36,7 +36,7 @@
        <a-entity
           position="0 0 0"
           scale="1 1 1"
-          rotation="-99 -20 0"
+          rotation="-99 20 0"
           gltf-model="{{asset('models/dimon.glb')}}"
         ></a-entity>
 
